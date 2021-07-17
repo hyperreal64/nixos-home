@@ -30,7 +30,6 @@ let
         amfora
         castor
         httpie
-        nmap
         nmap-graphical
         prettyping
         restic
@@ -41,6 +40,7 @@ let
     utilPkgs = with pkgs; [
         bottom
         bpytop
+        coreutils
         duf
         du-dust
         fd
@@ -55,12 +55,15 @@ let
         nushell
         onedrive
         pass
+        pinentry
         powershell
+        ranger
         ripgrep
         rpi-imager
         shellcheck
         shfmt
         s-tui
+        tdrop
         tealdeer
         tmux
         urlscan
