@@ -155,7 +155,7 @@ in
       icon-theme = "Marwaita-Dark";
       monospace-font-name = "JetBrainsMono Nerd Font Mono 11";
       show-battery-percentage = true;
-      text-scaling-factor = 1.0;
+      text-scaling-factor = 1.25;
     };
 
     "org/gnome/desktop/notifications" = {
@@ -173,6 +173,10 @@ in
 
     "org/gnome/desktop/notifications/application/ca-desrt-dconf-editor" = {
       application-id = "ca.desrt.dconf-editor.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/ch-protonmail-protonmail-bridge" = {
+      application-id = "ch.protonmail.protonmail-bridge.desktop";
     };
 
     "org/gnome/desktop/notifications/application/com-discordapp-discord" = {
@@ -419,7 +423,7 @@ in
     };
 
     "org/gnome/software" = {
-      check-timestamp = "int64 1625934596";
+      check-timestamp = "int64 1626609710";
       first-run = false;
       online-updates-timestamp = "int64 1624535205";
       update-notification-timestamp = "int64 1624535205";

@@ -1,13 +1,12 @@
 { config, lib, pkgs, stdenv, ... }:
 
 let
-    batPkgs = with pkgs; [
-        bat
-        bat-extras.batdiff
-        bat-extras.batgrep
-        bat-extras.batman
-        bat-extras.batwatch
-        bat-extras.prettybat
+    batPkgs = with pkgs.bat-extras; [
+        batdiff
+        batgrep
+        batman
+        batwatch
+        prettybat
     ];
 
     develPkgs = with pkgs; [
@@ -44,14 +43,11 @@ let
         duf
         du-dust
         fd
-        fzf
         hyperfine
-        jq
         killall
         libnotify
         lsof
         neofetch
-        nix-direnv
         nushell
         onedrive
         pass
