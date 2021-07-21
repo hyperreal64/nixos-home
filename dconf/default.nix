@@ -159,7 +159,7 @@ in
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "gnome-network-panel" "org-gnome-epiphany" "gnome-power-panel" "firefox" "org-gnome-nautilus" "org-sparkleshare-sparkleshare" "brave-browser" "org-gnome-screenshot" "org-gnome-software" "alacritty" "ca-desrt-dconf-editor" ];
+      application-children = [ "gnome-network-panel" "org-gnome-epiphany" "gnome-power-panel" "firefox" "org-gnome-nautilus" "org-sparkleshare-sparkleshare" "brave-browser" "org-gnome-screenshot" "org-gnome-software" "alacritty" "ca-desrt-dconf-editor" "org-gnome-extensions-desktop" ];
       show-in-lock-screen = false;
     };
 
@@ -384,7 +384,7 @@ in
     };
 
     "org/gnome/shell/extensions/openweather" = {
-      city = "42.1105779,-88.0336888>Palatine, Palatine Township, Cook County, Illinois, United States >-1";
+      city = "41.8755616,-87.6244212>Chicago, Cook County, Illinois, United States >-1";
       days-forecast = 2;
       decimal-places = 1;
       geolocation-provider = "openstreetmaps";
@@ -423,10 +423,10 @@ in
     };
 
     "org/gnome/software" = {
-      check-timestamp = "int64 1626609710";
+      check-timestamp = "int64 1626866821";
       first-run = false;
-      online-updates-timestamp = "int64 1624535205";
-      update-notification-timestamp = "int64 1624535205";
+      online-updates-timestamp = "int64 1626866885";
+      update-notification-timestamp = "int64 1626866885";
     };
 
     "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9" = {
@@ -472,7 +472,7 @@ in
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 14 58 ];
+      window-position = mkTuple [ 15 42 ];
       window-size = mkTuple [ 1891 989 ];
     };
 
