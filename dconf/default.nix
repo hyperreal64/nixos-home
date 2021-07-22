@@ -159,7 +159,7 @@ in
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "gnome-network-panel" "org-gnome-epiphany" "gnome-power-panel" "firefox" "org-gnome-nautilus" "org-sparkleshare-sparkleshare" "brave-browser" "org-gnome-screenshot" "org-gnome-software" "alacritty" "ca-desrt-dconf-editor" "org-gnome-extensions-desktop" ];
+      application-children = [ "gnome-network-panel" "org-gnome-epiphany" "gnome-power-panel" "firefox" "org-gnome-nautilus" "org-sparkleshare-sparkleshare" "brave-browser" "org-gnome-screenshot" "org-gnome-software" "alacritty" "ca-desrt-dconf-editor" "org-gnome-extensions-desktop" "org-gnome-chromegnomeshell" ];
       show-in-lock-screen = false;
     };
 
@@ -378,7 +378,7 @@ in
       disable-user-extensions = false;
       disabled-extensions = [ "dash-to-panel@jderose9.github.com" "switcher@landau.fi" "quake-mode@repsac-by.github.com" ];
       enabled-extensions = [ "blur-my-shell@aunetx" "appindicatorsupport@rgcjonas.gmail.com" "openweather-extension@jenslody.de" "unite@hardpixel.eu" "user-theme@gnome-shell-extensions.gcampax.github.com" "clipboard-indicator@tudmotu.com" "hide-universal-access@akiirui.github.io" "kernel-indicator@elboulangero.gitlab.com" "tofumenu@tofu" ];
-      favorite-apps = [ "org.gnome.Nautilus.desktop" "org.gnome.tweaks.desktop" "com.discordapp.Discord.desktop" "code.desktop" "Alacritty.desktop" "firefox.desktop" ];
+      favorite-apps = [ "org.gnome.Nautilus.desktop" "org.gnome.tweaks.desktop" "com.discordapp.Discord.desktop" "code.desktop" "firefox.desktop" "brave-browser.desktop" ];
       had-bluetooth-devices-setup = true;
       welcome-dialog-last-shown-version = "40.1";
     };
@@ -423,10 +423,10 @@ in
     };
 
     "org/gnome/software" = {
-      check-timestamp = "int64 1626866821";
+      check-timestamp = "int64 1626952883";
       first-run = false;
-      online-updates-timestamp = "int64 1626866885";
-      update-notification-timestamp = "int64 1626866885";
+      online-updates-timestamp = "int64 1626952941";
+      update-notification-timestamp = "int64 1626952941";
     };
 
     "org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9" = {

@@ -29,6 +29,7 @@ let
         amfora
         castor
         httpie
+        hugo
         nmap-graphical
         prettyping
         restic
