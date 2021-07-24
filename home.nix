@@ -25,6 +25,13 @@ let
         nerdfonts
     ];
 
+    goPkgs = with pkgs; [
+        go
+        gosec
+        go-tools
+        gops
+    ];
+
     netPkgs = with pkgs; [
         amfora
         castor
@@ -90,7 +97,7 @@ in
         homeDirectory = "/home/jas";
         stateVersion = "21.05";
 
-        packages = batPkgs ++ develPkgs ++ fontPkgs ++ netPkgs ++ utilPkgs;
+        packages = batPkgs ++ develPkgs ++ fontPkgs ++ goPkgs ++ netPkgs ++ utilPkgs;
     };
 
     programs = {
