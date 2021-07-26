@@ -3,7 +3,7 @@
 {
     programs.kitty = {
         enable = true;
-        font.name = "Iosevka FT";
+        font.name = "JetBrainsMono Nerd Font Mono";
         font.size = 13;
         settings = {
             scrollback_lines = 10000;

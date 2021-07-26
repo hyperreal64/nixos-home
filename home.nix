@@ -45,6 +45,7 @@ let
     ];
 
     utilPkgs = with pkgs; [
+        antibody
         bottom
         bpytop
         coreutils
@@ -85,6 +86,7 @@ in
         ./dconf/default.nix
         ./git/default.nix
         ./gnome/default.nix
+	./gpg/default.nix
         ./kitty/default.nix
         ./shell/default.nix
         ./ssh/default.nix
