@@ -16,21 +16,21 @@ let
         exercism
         gcc
         gnumake
+        go
+        go-tools
+        gops
+        gosec
         nix-direnv
+        perl
+        rakudo
         vscode
+        zef
     ];
 
     fontPkgs = with pkgs; [
         google-fonts
         ibm-plex
         nerdfonts
-    ];
-
-    goPkgs = with pkgs; [
-        go
-        go-tools
-        gops
-        gosec
     ];
 
     netPkgs = with pkgs; [
@@ -99,7 +99,7 @@ in
             homeDirectory = "/home/jas";
             stateVersion = "21.05";
 
-            packages = batPkgs ++ develPkgs ++ fontPkgs ++ goPkgs ++ netPkgs ++ utilPkgs;
+            packages = batPkgs ++ develPkgs ++ fontPkgs ++ netPkgs ++ utilPkgs;
         };
 
         xdg.userDirs = {
