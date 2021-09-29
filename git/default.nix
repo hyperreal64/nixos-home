@@ -14,7 +14,7 @@ in
   programs.git = {
     enable = true;
     extraConfig = gitConfig;
-    userEmail = "hyperreal64@gmail.com";
+    userEmail = "hyperreal@unixcat.coffee";
     userName = "Jeffrey Serio";
   };
 }

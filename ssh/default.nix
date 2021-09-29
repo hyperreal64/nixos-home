@@ -12,7 +12,7 @@
             user = "jas";
         };
         "uc" = {
-            hostname = "unixc.at";
+            hostname = "unixcat.coffee";
             user = "uc";
         };
     };

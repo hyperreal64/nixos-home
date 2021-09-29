@@ -21,15 +21,16 @@ let
     ];
 
     fontPkgs = with pkgs; [
+        google-fonts
         ibm-plex
         nerdfonts
     ];
 
     goPkgs = with pkgs; [
         go
-        gosec
         go-tools
         gops
+        gosec
     ];
 
     netPkgs = with pkgs; [
@@ -45,12 +46,11 @@ let
     ];
 
     utilPkgs = with pkgs; [
-        antibody
         bottom
         bpytop
         coreutils
-        duf
         du-dust
+        duf
         fd
         hyperfine
         killall
@@ -65,57 +65,53 @@ let
         ranger
         ripgrep
         rpi-imager
+        s-tui
         shellcheck
         shfmt
-        s-tui
+        starship
         tdrop
         tealdeer
         tmux
-        urlscan
-        xclip
         unzip
+        xclip
         zip
     ];
 
 in
 
-{
-    programs.home-manager.enable = true;
+    {
+        programs.home-manager.enable = true;
 
-    imports = [
-        ./dconf/default.nix
-        ./git/default.nix
-        ./gnome/default.nix
-	./gpg/default.nix
-        ./kitty/default.nix
-        ./shell/default.nix
-        ./ssh/default.nix
-    ];
+        imports = [
+            ./dconf/default.nix
+            ./git/default.nix
+            ./gnome/default.nix
+            ./gpg/default.nix
+            ./kitty/default.nix
+            ./shell/default.nix
+            ./ssh/default.nix
+        ];
 
-    nixpkgs.config.allowUnfree = true;
+        nixpkgs.config.allowUnfree = true;
 
-    home = {
-        username = "jas";
-        homeDirectory = "/home/jas";
-        stateVersion = "21.05";
+        home = {
+            username = "jas";
+            homeDirectory = "/home/jas";
+            stateVersion = "21.05";
 
-        packages = batPkgs ++ develPkgs ++ fontPkgs ++ goPkgs ++ netPkgs ++ utilPkgs;
-    };
+            packages = batPkgs ++ develPkgs ++ fontPkgs ++ goPkgs ++ netPkgs ++ utilPkgs;
+        };
 
-    programs = {
-        neomutt.enable = true;
-    };
-
-    xdg.userDirs = {
-        enable = true;
-        createDirectories = true;
-        desktop = "\$HOME/desktop";
-        documents = "\$HOME/documents";
-        download = "\$HOME/downloads";
-        pictures = "\$HOME/onedrive/Pictures";
-        publicShare = "\$HOME/misc";
-        music = "\$HOME/misc/music";
-        templates = "\$HOME/misc/templates";
-        videos = "\$HOME/misc/videos";
-    };
-}
+        xdg.userDirs = {
+            enable = true;
+            createDirectories = true;
+            desktop = "\$HOME/desktop";
+            documents = "\$HOME/documents";
+            download = "\$HOME/downloads";
+            pictures = "\$HOME/onedrive/Pictures";
+            publicShare = "\$HOME/misc";
+            music = "\$HOME/misc/music";
+            templates = "\$HOME/templates";
+            videos = "\$HOME/misc/videos";
+        };
+    }

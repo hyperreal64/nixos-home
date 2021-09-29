@@ -30,5 +30,5 @@
         };
     };
 
-    programs.lsd.enable = true;
+    programs.exa.enable = true;
 }
