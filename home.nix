@@ -37,7 +37,7 @@ let
         amfora
         castor
         httpie
-        hugo
+        lagrange
         nmap-graphical
         prettyping
         restic
@@ -49,6 +49,7 @@ let
         bottom
         bpytop
         coreutils
+        dropbox
         du-dust
         duf
         fd
@@ -69,7 +70,6 @@ let
         shellcheck
         shfmt
         starship
-        tdrop
         tealdeer
         tmux
         unzip
@@ -83,11 +83,8 @@ in
         programs.home-manager.enable = true;
 
         imports = [
-            ./dconf/default.nix
             ./git/default.nix
-            ./gnome/default.nix
             ./gpg/default.nix
-            ./kitty/default.nix
             ./shell/default.nix
             ./ssh/default.nix
         ];
@@ -97,7 +94,7 @@ in
         home = {
             username = "jas";
             homeDirectory = "/home/jas";
-            stateVersion = "21.05";
+            stateVersion = "21.11";
 
             packages = batPkgs ++ develPkgs ++ fontPkgs ++ netPkgs ++ utilPkgs;
         };
@@ -108,7 +105,7 @@ in
             desktop = "\$HOME/desktop";
             documents = "\$HOME/documents";
             download = "\$HOME/downloads";
-            pictures = "\$HOME/onedrive/Pictures";
+            pictures = "\$HOME/pictures";
             publicShare = "\$HOME/misc";
             music = "\$HOME/misc/music";
             templates = "\$HOME/templates";

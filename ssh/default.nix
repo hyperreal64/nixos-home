@@ -7,10 +7,6 @@
             hostname = "envs.net";
             user = "hyperreal";
         };
-        "azura" = {
-            hostname = "azura.local";
-            user = "jas";
-        };
         "uc" = {
             hostname = "unixcat.coffee";
             user = "uc";
