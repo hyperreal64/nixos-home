@@ -11,8 +11,8 @@ let
 
     develPkgs = with pkgs; [
         cachix
-        dconf2nix
-        diff-so-fancy
+        perl534Packages.Appcpanminus
+	    diff-so-fancy
         exercism
         gcc
         gnumake
@@ -22,8 +22,11 @@ let
         gosec
         nix-direnv
         perl
+	    python3Full
         rakudo
+	    rustup
         vscode
+	    yarn
         zef
     ];
 
@@ -37,7 +40,6 @@ let
         amfora
         castor
         httpie
-        lagrange
         nmap-graphical
         prettyping
         restic
@@ -48,6 +50,7 @@ let
     utilPkgs = with pkgs; [
         bottom
         bpytop
+	    chezmoi
         coreutils
         dropbox
         du-dust
@@ -59,6 +62,7 @@ let
         lsof
         neofetch
         nushell
+        offlineimap
         onedrive
         pass
         pinentry
@@ -72,6 +76,7 @@ let
         starship
         tealdeer
         tmux
+	    trash-cli
         unzip
         xclip
         zip
@@ -102,7 +107,6 @@ in
         xdg.userDirs = {
             enable = true;
             createDirectories = true;
-            desktop = "\$HOME/desktop";
             documents = "\$HOME/documents";
             download = "\$HOME/downloads";
             pictures = "\$HOME/pictures";
