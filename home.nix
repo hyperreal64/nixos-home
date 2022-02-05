@@ -12,7 +12,7 @@ let
     develPkgs = with pkgs; [
         cachix
         perl534Packages.Appcpanminus
-	    diff-so-fancy
+		diff-so-fancy
         exercism
         gcc
         gnumake
@@ -22,11 +22,11 @@ let
         gosec
         nix-direnv
         perl
-	    python3Full
+		python3Full
         rakudo
-	    rustup
+		rustup
         vscode
-	    yarn
+		yarn
         zef
     ];
 
@@ -38,24 +38,25 @@ let
 
     netPkgs = with pkgs; [
         amfora
-        castor
+		discord
+		electron-mail
+		element-desktop
         httpie
+		lagrange
         nmap-graphical
         prettyping
-        restic
-        urlscan
+		protonmail-bridge
         w3m
     ];
 
     utilPkgs = with pkgs; [
         bottom
         bpytop
-	    chezmoi
         coreutils
-        dropbox
         du-dust
         duf
         fd
+		gnome.gnome-tweaks
         hyperfine
         killall
         libnotify
@@ -63,7 +64,6 @@ let
         neofetch
         nushell
         offlineimap
-        onedrive
         pass
         pinentry
         powershell
@@ -74,10 +74,12 @@ let
         shellcheck
         shfmt
         starship
+		syncthing-tray
         tealdeer
         tmux
-	    trash-cli
+		trash-cli
         unzip
+		vivid
         xclip
         zip
     ];
@@ -86,13 +88,6 @@ in
 
     {
         programs.home-manager.enable = true;
-
-        imports = [
-            ./git/default.nix
-            ./gpg/default.nix
-            ./shell/default.nix
-            ./ssh/default.nix
-        ];
 
         nixpkgs.config.allowUnfree = true;
 
@@ -115,4 +110,73 @@ in
             templates = "\$HOME/templates";
             videos = "\$HOME/misc/videos";
         };
+
+		programs.git = {
+			enable = true;
+			userEmail = "hyperreal@unixcat.coffee";
+			userName = "Jeffrey Serio";
+			extraConfig = {
+				core = {
+					editor = "nvim";
+					pager = "diff-so-fancy | less --tabs=4 -RFX";
+				};
+				init.defaultBranch = "main";
+				pull.rebase = true;
+			};
+		};
+
+		programs.gpg = {
+			enable = true;
+			settings = {
+				default-key = "0x9129BD07C3509CED";
+				no-emit-version = true;
+				no-comments = true;
+				display-charset = "utf-8";
+				keyid-format = "0xlong";
+				with-fingerprint = true;
+				use-agent = true;
+			};
+		};
+
+		programs.htop.enable = true;
+
+		programs.jq.enable = true;
+
+		programs.direnv = {
+			enable = true;
+			nix-direnv.enable = true;
+		};
+		
+		programs.fzf = {
+			enable = true;
+			defaultCommand = "fd --type f";
+		};
+		
+		programs.bat = {
+			enable = true;
+			config = {
+				pager = "less -FR";
+				theme = "Dracula";
+			};
+		};
+		
+		programs.exa.enable = true;
+		
+		programs.ssh.enable = true;
+		programs.ssh.matchBlocks = {
+			"envs" = {
+				hostname = "envs.net";
+				user = "hyperreal";
+			};
+			"uc" = {
+				hostname = "unixcat.coffee";
+				user = "core";
+			};
+			"az" = {
+				hostname = "azura.local";
+				user = "uc";
+			};
+		};
+
+		services.syncthing.enable = true;
     }
